@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>OnlineQuiz</display-name>
+  <servlet>
+    <servlet-name>DisplayQuizesServlet</servlet-name>
+    <servlet-class>ro.incrys.internship.servlets.DisplayQuizesServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AnswerServlet</servlet-name>
+    <servlet-class>ro.incrys.internship.servlets.AnswerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CandidateServlet</servlet-name>
+    <servlet-class>ro.incrys.internship.servlets.CandidateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CreateQuizServlet</servlet-name>
+    <servlet-class>ro.incrys.internship.servlets.CreateQuizServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>ro.incrys.internship.servlets.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ProcessQuizServlet</servlet-name>
+    <servlet-class>ro.incrys.internship.servlets.ProcessQuizServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>QuestionServlet</servlet-name>
+    <servlet-class>ro.incrys.internship.servlets.QuestionServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>QuizServlet</servlet-name>
+    <servlet-class>ro.incrys.internship.servlets.QuizServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>ro.incrys.internship.servlets.UserServlet</servlet-class>
+  </servlet>
+  <welcome-file-list>
+    <welcome-file>../login.jsp</welcome-file>
+    <welcome-file>../protected/htmlUI/index.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>EditQuizServlet</display-name>
+    <servlet-name>EditQuizServlet</servlet-name>
+    <servlet-class>ro.incrys.internship.servlets.EditQuizServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditQuizServlet</servlet-name>
+    <url-pattern>/EditQuizServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddQuizToCandidate</display-name>
+    <servlet-name>AddQuizToCandidate</servlet-name>
+    <servlet-class>ro.incrys.internship.servlets.AddQuizToCandidate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddQuizToCandidate</servlet-name>
+    <url-pattern>/AddQuizToCandidate</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <servlet-name>Jersey REST Service</servlet-name>
+    <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+  <init-param>
+    <param-name>com.sun.jersey.config.property.packages</param-name>
+    <param-value>jersey</param-value>
+  </init-param>
+  <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Jersey REST Service</servlet-name>
+    <url-pattern>/rest/*</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>

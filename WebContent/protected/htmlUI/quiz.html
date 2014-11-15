@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome</title>
+<link rel="stylesheet" type="text/css"
+	href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.10.0/css/uikit.css" />
+<link rel="stylesheet" type="text/css"
+	href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css" />
+
+</head>
+<body>
+	<div class="uk-width-medium-1-2 uk-container-center">
+		<nav class="uk-navbar">
+
+			<ul class="uk-navbar-nav ">
+				<li><a href="LoginServlet">Sign out</a></li>
+			</ul>
+		</nav>
+		<div class="uk-width-1-1">
+			<br />
+			<h1>Quiz</h1>
+		</div>
+		<br />
+		<div class="uk-grid">
+
+			<div class="uk-width-1-1">
+				<form method='post' action='../../ProcessQuizServlet' id="quizForm">
+				</form>
+				<script class="quizTemplate" type="text/x-handlebars-template">
+			     <ol>        
+             		 {{#question}}
+					 
+						<li>{{text}}<br/>
+ 					 
+                     {{#answers}}
+
+ 					<label><input type="radio" name="RId{{question.id}}" value="{{id}}">{{text}}</label>
+                     <br/>
+					{{/answers}}
+                     <hr>
+						</li>
+					 
+					 {{/question}}	
+                </ol>
+              	<input type="hidden" value="{{id}}" name="quizId">
+				<input class="uk-button uk-button-primary" type='submit'
+					value='Submit Quiz'></input>			    
+             </script>
+
+			</div>
+		</div>
+	</div>
+
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+	<script type="text/javascript" src="../resources/quiz.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.10.0/js/uikit.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome</title>
+<link rel="stylesheet" type="text/css"
+	href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.10.0/css/uikit.css" />
+<link rel="stylesheet" type="text/css"
+	href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css" />
+
+</head>
+<body>
+	<div class="uk-width-medium-1-2 uk-container-center">
+		<nav class="uk-navbar">
+
+			<ul class="uk-navbar-nav ">
+				<li><a href="LoginServlet">Sign out</a></li>
+			</ul>
+		</nav>
+		<div class="uk-width-1-1">
+			<br />
+			<h1>Welcome</h1>
+		</div>
+		<br />
+		<div class="uk-grid">
+
+			<div class="uk-width-1-1">
+				<h2>Select a quiz from the following list to start the test:</h2>
+				<br />
+			</div>
+			<div class="uk-width-1-1">
+				<ol  id="quizesList" class="uk-list uk-list-striped uk-width-medium-1-1">
+				</ol>
+					<script class="quizesTemplate" type="text/x-handlebars-template">
+					 {{#each this}}
+					
+					 <li><a href='http://localhost:8080/QuizAppWorkProject5/protected/htmlUI/quiz.html?id={{this.id}}'> {{this.name}}</a></li>
+					 {{/each}}				    
+             </script>
+				
+			</div>
+		</div>
+	</div>
+	
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script
+		src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+	<script type="text/javascript" src="../resources/quizes.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.10.0/js/uikit.js"></script>
+</body>
+</html>
