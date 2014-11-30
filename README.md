@@ -13,3 +13,6 @@ Technologies used:
 -	Uikit framework, jQuery
 -	MySQL 
 
+Development Environment: 
+- Eclipse IDE
+- Apache Tomcat
