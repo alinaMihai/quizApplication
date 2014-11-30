@@ -1,11 +1,13 @@
-quizesApplication
+Quiz Application
 =================
 
-Technologies used:
-- Java : Servlets, JSP
-- Standard Tag Library for JavaServer Pages (JSTL) 
-- MySql database
-- Javascript/jQuery, jQuery UI
-- UiKit framework
-- Handlebars template
+o	Web Application, two parts: Candidate and Admin
+o	Features:
+-	Login and authentication system
+-	Candidate: take assigned quizzes w/o time limit
+-	Admin: CRUD for quizzes, Create and Assign quizzes to Candidates
+o	Technologies used:
+-	Java EE: Servlets and JSP (JSTL)
+-	Uikit framework, jQuery
+-	MySQL 
 
